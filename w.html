@@ -1,0 +1,2224 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <link rel="canonical" href="https://blog.csdn.net/qq_45830543/article/details/116134285"/>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="renderer" content="webkit"/>
+    <meta name="force-rendering" content="webkit"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="report" content='{"pid": "blog", "spm":"1001.2101"}'>
+    <meta name="referrer" content="always">
+    <meta http-equiv="Cache-Control" content="no-siteapp" /><link rel="alternate" media="handheld" href="#" />
+    <meta name="shenma-site-verification" content="5a59773ab8077d4a62bf469ab966a63b_1497598848">
+    <meta name="applicable-device" content="pc">
+    <link  href="https://g.csdnimg.cn/static/logo/favicon32.ico"  rel="shortcut icon" type="image/x-icon" />
+    <title>git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘._郑敬儒~的博客-CSDN博客</title>
+    <script>
+      (function(){ 
+        var el = document.createElement("script"); 
+        el.src = "https://s3a.pstatp.com/toutiao/push.js?1abfa13dfe74d72d41d83c86d240de427e7cac50c51ead53b2e79d40c7952a23ed7716d05b4a0f683a653eab3e214672511de2457e74e99286eb2c33f4428830"; 
+        el.id = "ttzz"; 
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(el, s);
+      })(window)
+    </script>
+        <meta name="keywords" content="git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.">
+        <meta name="csdn-baidu-search"  content='{"autorun":true,"install":true,"keyword":"git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘."}'>
+    <meta name="description" content="一、当我向GitHub远程仓库中推送本地仓库的项目进行到最后一步命令时，报了如下的错误：Branch 'master' set up to track remote branch 'master' from 'origin'.解决方法：1、添加到本地仓库git add .2、添加提交描述git commit -m ‘提交’3、提交前先从远程仓库主分支中拉取请求gitpull origin master4、把本地仓库代码提交git push -u origin master二、如何">
+    <script src="//g.csdnimg.cn/tingyun/1.8.5/blog.js" type='text/javascript'></script>
+        <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/css/detail_enter-9e81df2e6a.min.css">
+    <script type="application/ld+json">{"@context":"https://ziyuan.baidu.com/contexts/cambrian.jsonld","@id":"https://blog.csdn.net/qq_45830543/article/details/116134285","appid":"1638831770136827","pubDate":"2021-04-25T17:33:06","title":"git push -u origin master提交时报错Branch &lsquo;master&lsquo; set up to track remote branch &lsquo;master&lsquo; from &lsquo;origin&lsquo;._郑敬儒~的博客-CSDN博客","upDate":"2021-04-25T17:43:50"}</script>
+        <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/release/blogv2/dist/pc/themesSkin/skin-thespecialists/skin-thespecialists-085bbd0414.min.css">
+    <script src="https://csdnimg.cn/public/common/libs/jquery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var isCorporate = false;//注释删除enterprise
+        var username =  "qq_45830543";
+        var skinImg = "white";
+        var blog_address = "https://blog.csdn.net/qq_45830543";
+        var currentUserName = "l614928";
+        var isOwner = false;
+        var loginUrl = "http://passport.csdn.net/account/login?from=https://blog.csdn.net/qq_45830543/article/details/116134285";
+        var blogUrl = "https://blog.csdn.net/";
+        var avatar = "https://profile.csdnimg.cn/4/9/7/3_qq_45830543";
+        var articleTitle = "git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.";
+        var articleDesc = "一、当我向GitHub远程仓库中推送本地仓库的项目进行到最后一步命令时，报了如下的错误：Branch \'master\' set up to track remote branch \'master\' from \'origin\'.解决方法：1、添加到本地仓库git add .2、添加提交描述git commit -m ‘提交’3、提交前先从远程仓库主分支中拉取请求gitpull origin master4、把本地仓库代码提交git push -u origin master二、如何";
+        var articleTitles = "git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘._郑敬儒~的博客-CSDN博客";
+        var nickName = "郑敬儒~";
+        var articleDetailUrl = "https://blog.csdn.net/qq_45830543/article/details/116134285";
+        if(window.location.host.split('.').length == 3) {
+            blog_address = blogUrl + username;
+        }
+        var skinStatus = "White";
+        var blogStaticHost = "https://csdnimg.cn/release/blogv2/"
+        var mallTestStyle = "popup"
+    </script>
+    <script src="https://g.csdnimg.cn/??fixed-sidebar/1.1.6/fixed-sidebar.js" type="text/javascript"></script>
+    <script src='//g.csdnimg.cn/common/csdn-report/report.js' type='text/javascript'></script>
+    <link rel="stylesheet" type="text/css" href="https://csdnimg.cn/public/sandalstrap/1.4/css/sandalstrap.min.css">
+    <style>
+        .MathJax, .MathJax_Message, .MathJax_Preview{
+            display: none
+        }
+    </style>
+    <script src="https://dup.baidustatic.com/js/ds.js"></script>
+</head>
+  <body class="nodata " style="">
+        <script>
+            var toolbarSearchExt = '{"landingWord":[],"queryWord":"","tag":[],"title":"git push -u origin master提交时报错Branch &lsquo;master&lsquo; set up to track remote branch &lsquo;master&lsquo; from &lsquo;origin&lsquo;."}';
+        </script>
+    <script src="https://g.csdnimg.cn/common/csdn-toolbar/csdn-toolbar.js" type="text/javascript"></script>
+    <script>
+    (function(){
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        }
+        else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+    </script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/pc/css/blog_code-01256533b5.min.css">
+<link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/chart-3456820cac.css" />
+
+<script>
+    var articleId = 116134285;
+    var commentscount = 1;
+    var curentUrl = "https://blog.csdn.net/qq_45830543/article/details/116134285";
+    var myUrl = "https://my.csdn.net/";
+    var highlight = ["origin","remote","branch","master","track","push","from","set","ack","git","时报","fr","提交","报错","to","up","om","tr","-",".","时","‘","错"];//高亮数组
+    var isRecommendModule = true;
+    var isBaiduPre = true;
+    var baiduCount = 2;
+    var setBaiduJsCount = 10;
+    var share_card_url = "https://app-blog.csdn.net/share?article_id=116134285&username=qq_45830543"
+	var articleType = 1;
+    var baiduKey = "git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.";
+    var userNewReport = true;
+    var needInsertBaidu = true;
+    var recommendRegularDomainArr = ["blog.csdn.net/.+/article/details/","download.csdn.net/download/","edu.csdn.net/course/detail/","ask.csdn.net/questions/","bbs.csdn.net/topics/","www.csdn.net/gather_.+/"]
+    var codeStyle = "";
+    var baiduSearchType = "title";
+    var canRead = true;
+    var blogMoveHomeArticle = false;
+    var showPcWindowAd = false;
+    var showHeadWord = true;
+    var showSearchText = "";
+    var linkPage = true;
+    var articleSource = 1;
+    var articleReport = '{"pid": "blog", "spm":"1001.2101"}';
+    var isShowToQuestion = false;
+    var baiduSearchChannel = 'pc_relevant'
+    var baiduSearchIdentification = '.pc_relevant_multi_platform_whitelistv1'
+    var distRequestId = '1657767491346_20217'
+    var initRewardObject = {
+        giver: "l614928",
+        anchor: "qq_45830543",
+        articleId: "116134285",
+        sign: "cbd5c6a5bbbc53b7d8ab4b01cc6b5b4b",
+    }
+    var isLikeStatus = false;
+    var isUnLikeStatus = false;
+    var studyLearnWord = "";
+    var isCurrentUserVip = false;
+    var testNewStyle = "control"
+    var isShowConcision = false;
+    var isCookieConcision = false
+    var isHasDirectoryModel = false
+    var isShowSideModel = false
+    var isShowDirectoryModel = true
+    function getCookieConcision(sName){
+        var allCookie = document.cookie.split("; ");
+        for (var i=0; i < allCookie.length; i++){
+            var aCrumb = allCookie[i].split("=");
+            if (sName == aCrumb[0])
+                return aCrumb[1];
+        }
+        return null;
+    }
+    if (getCookieConcision('blog_details_concision') && getCookieConcision('blog_details_concision') == 0){
+        isCookieConcision = true
+        isShowSideModel = true
+        isShowDirectoryModel = false
+    }
+</script>
+<div class="main_father clearfix d-flex justify-content-center " style="height:100%;"> 
+    <div class="container clearfix " id="mainBox">
+        <script>
+        if(!isCookieConcision){
+            $('.main_father').removeClass('mainfather-concision')
+            $('.main_father .container').removeClass('container-concision')
+        }
+        </script>
+        <main>
+<script type="text/javascript">
+    function getQueryString(name) {   
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象  
+      var r = window.location.search.substr(1).match(reg);  //匹配目标参数
+      if( r != null ) return decodeURIComponent( r[2] ); return '';   
+    }
+    function stripscript(s){ 
+      var pattern = new RegExp("[`~!@#$^&*()=|{}':;',\\[\\].<>/?~！@#￥……&*（）——|{}【】‘；：”“'。，、？%]") 
+      var rs = ""; 
+      for (var i = 0; i < s.length; i++) { 
+        rs = rs+s.substr(i, 1).replace(pattern, ''); 
+      } 
+      return rs; 
+    }
+    var blogHotWords = stripscript(getQueryString('utm_term')).length > 1 ? stripscript(getQueryString('utm_term')) : ''
+</script>
+<div class="blog-content-box">
+        <div class="article-header-box">
+        <div class="article-header">
+            <div class="article-title-box">
+                <h1 class="title-article" id="articleContentId">git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.</h1>
+            </div>
+            <div class="article-info-box">
+                <div class="article-bar-top">
+                    <img class="article-type-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/original.png" alt="">
+                    <div class="bar-content">
+                        <span class="c-gray">置顶</span>
+                    <a class="follow-nickName " href="https://blog.csdn.net/qq_45830543" target="_blank" rel="noopener">郑敬儒~</a>
+                    <img class="article-time-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCurrentTime2.png" alt="">
+                    <span class="time">于&nbsp;2021-04-25 17:43:50&nbsp;发布</span>
+                    <img class="article-read-img article-heard-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/articleReadEyes2.png" alt="">
+                    <span class="read-count">7464</span>
+                    <a id="blog_detail_zk_collection" class="un-collection" data-report-click='{"mod":"popu_823","spm":"1001.2101.3001.4232","ab":"new"}'>
+                        <img class="article-collect-img article-heard-img un-collect-status isdefault" style="display:inline-block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect2.png" alt="">
+                        <img class="article-collect-img article-heard-img collect-status isactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive2.png" alt="">
+                        <span class="name">收藏</span>
+                        <span class="get-collection">
+                            8
+                        </span>
+                    </a>
+                    </div>
+                </div>
+                <div class="blog-tags-box">
+                    <div class="tags-box artic-tag-box">
+                            <span class="label">分类专栏：</span>
+                                <a class="tag-link" href="https://blog.csdn.net/qq_45830543/category_11012998.html" target="_blank" rel="noopener">Git</a>
+                    </div>
+                </div>
+                <div class="slide-content-box">
+                    <div class="article-copyright">
+                        <div class="creativecommons">
+                            版权声明：本文为博主原创文章，遵循<a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noopener"> CC 4.0 BY-SA </a>版权协议，转载请附上原文出处链接和本声明。
+                        </div>
+                        <div class="article-source-link">
+                            本文链接：<a href="https://blog.csdn.net/qq_45830543/article/details/116134285" target="_blank">https://blog.csdn.net/qq_45830543/article/details/116134285</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="operating">
+                    <a class="href-article-edit slide-toggle">版权</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="blogHuaweiyunAdvert"></div>
+        <div id="blogColumnPayAdvert">
+            <div class="column-group">
+                <div class="column-group-item column-group0 column-group-item-one">
+                    <div class="item-l">
+                        <a class="item-target" href="https://blog.csdn.net/qq_45830543/category_11012998.html" target="_blank" title="Git"
+                        data-report-view='{"spm":"1001.2101.3001.6332"}'
+                        data-report-click='{"spm":"1001.2101.3001.6332"}'>
+                            <img class="item-target" src="https://img-blog.csdnimg.cn/20201014180756738.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="">
+                            <span class="title item-target">
+                                <span>
+                                <span class="tit">Git</span>
+                                    <span class="dec">专栏收录该内容</span>
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="item-m">
+                        <span>1 篇文章</span>
+                        <span>0 订阅</span>
+                    </div>
+                    <div class="item-r">
+                            <a class="item-target article-column-bt articleColumnFreeBt" data-id="11012998">订阅专栏</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <article class="baidu_pl">
+        <div id="article_content" class="article_content clearfix">
+        <link rel="stylesheet" href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/ck_htmledit_views-bbac9290cd.css">
+                <div id="content_views" class="markdown_views prism-atom-one-dark">
+                    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+                        <path stroke-linecap="round" d="M5,0 0,2.5 5,5z" id="raphael-marker-block" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path>
+                    </svg>
+                    <h2><a id="_0"></a>一、</h2> 
+<p>当我向GitHub远程仓库中推送本地仓库的项目进行到最后一步命令时&#xff0c;报了如下的错误&#xff1a;<br /> <code>Branch &#39;master&#39; set up to track remote branch &#39;master&#39; from &#39;origin&#39;.</code><br /> <img src="https://img-blog.csdnimg.cn/20210425174329178.png" alt="在这里插入图片描述" /></p> 
+<h2><a id="_7"></a>解决方法&#xff1a;</h2> 
+<p>1、添加到本地仓库</p> 
+<p>git add .</p> 
+<p>2、添加提交描述</p> 
+<p>git commit -m ‘提交’</p> 
+<p>3、提交前先从远程仓库主分支中拉取请求</p> 
+<p>gitpull origin master</p> 
+<p>4、把本地仓库代码提交</p> 
+<p>git push -u origin master</p> 
+<hr /> 
+<h3><a id="GitHub_32"></a>二、如何将本地的一个新项目上传到GitHub上新建的仓库中去</h3> 
+<p>将一个本地的项目上传到GitHub仓库中托管&#xff0c;简单来说分为五步。<br /> 1、<strong><code>git init</code><br /> 把这个文件夹变成Git可管理的仓库</strong>。</p> 
+<p>2、<strong><code>git add .</code><br /> 把该目录下的所有文件添加到仓库</strong></p> 
+<p>3、<strong><code>git commit -m &#34;first commit&#34;</code><br /> 把项目提交到仓库</strong>。</p> 
+<p>4、<strong><code>git remote add origin ...</code></strong><br /> (<strong>将本地仓库与GitHub上创建好的目标远程仓库进行关联。 …后面加的是GitHub目标仓库地址</strong>)。</p> 
+<p>5、<strong><code>git push -u origin master</code></strong><br /> <strong>把本地库的所有内容推送到GitHub远程仓库上。</strong></p>
+                </div>
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/editerView/markdown_views-3fd7f7a902.css" rel="stylesheet">
+                <link href="https://csdnimg.cn/release/blogv2/dist/mdeditor/css/style-49037e4d27.css" rel="stylesheet">
+        </div>
+        <div id="treeSkill"></div>
+    </article>
+  <script>
+  $(function() {
+    setTimeout(function () {
+      var mathcodeList = document.querySelectorAll('.htmledit_views img.mathcode');
+      if (mathcodeList.length > 0) {
+        var testImg = new Image();
+        testImg.onerror = function () {
+          mathcodeList.forEach(function (item) {
+            $(item).before('<span class="img-codecogs">\\(' + item.alt + '\\)</span>');
+            $(item).remove();
+          })
+          MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+        }
+        testImg.src = mathcodeList[0].src;
+      }
+    }, 1000)
+  })
+  </script>
+</div>
+<div class="more-toolbox-new" id="toolBarBox">
+    <div class="left-toolbox">
+        <div class="toolbox-left">
+            <div class="profile-box"><a class="profile-href" target="_blank" href="https://blog.csdn.net/qq_45830543"><img class="profile-img" src="https://profile.csdnimg.cn/4/9/7/3_qq_45830543"><span class="profile-name">郑敬儒~</span></a></div>
+            <div class="profile-attend">
+                    <a class="tool-attend tool-bt-button tool-bt-attend" href="javascript:;" data-report-view='{"mod":"1592215036_002","spm":"1001.2101.3001.4232","extend1":"关注"}'>关注</a>
+                <a class="tool-item-follow active-animation" style="display:none;">关注</a>
+            </div>
+        </div>
+        <div class="toolbox-middle">
+        <ul class="toolbox-list">
+            <li class="tool-item tool-item-size tool-active is-like" id="is-like">
+            <a class="tool-item-href">
+                <img style="display:none;" id="is-like-imgactive-animation-like" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarThumbUpactive.png" alt="">
+                <img class="isactive" style="display:none" id="is-like-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2021Active.png" alt="">
+                <img class="isdefault" style="display:block" id="is-like-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2021White.png" alt="">  
+                <span id="spanCount" class="count ">
+                        3
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">点赞</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-unlike" id="is-unlike">
+            <a class="tool-item-href">
+                <img class="isactive" style="margin-right:0px;display:none" id="is-unlike-imgactive" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnHeart2021Active.png" alt="">
+                <img class="isdefault" style="margin-right:0px;display:block" id="is-unlike-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnHeart2021White.png" alt="">
+                <span id="unlikeCount" class="count "></span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">踩</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-item-comment">
+            <a class="tool-item-href" href="#commentBox" data-report-click='{"spm":"1001.2101.3001.7009"}'>
+                <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newComment2021White.png" alt="">
+                <span class="count">
+                    1
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">评论</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active is-collection ">
+            <a class="tool-item-href" href="javascript:;" data-report-click='{"mod":"popu_824","spm":"1001.2101.3001.4130","ab":"new"}'>
+                <img style="display:none" id="is-collection-img-collection" class="animation-dom active-animation" src="https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollectionActive.png" alt="">
+                <img class="isdefault" id="is-collection-img" style="display:block" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCollectWhite.png" alt="">
+                <img class="isactive" id="is-collection-imgactive" style="display:none" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newCollectActive.png" alt="">
+                <span class="count get-collection " id="get-collection">
+                    8
+                </span>
+            </a>
+            <div class="tool-hover-tip"><span class="text space">收藏</span></div>
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-item-reward">
+                <a class="tool-item-href" href="javascript:;" data-report-click='{"mod":"popu_830","spm":"1001.2101.3001.4237","dest":"","ab":"new"}'>
+                <img class="isdefault reward-bt" id="rewardBtNew" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newRewardWhite.png" alt="打赏">
+                <span class="count"></span>
+                </a>
+                <div class="tool-hover-tip"><span class="text space">打赏</span></div>
+            </li>
+            <li class="tool-item tool-item-bar">
+            </li>
+            <li class="tool-item tool-item-size tool-active tool-QRcode" id="tool-share">
+                <a class="tool-item-href" href="javascript:;" data-report-click='{"mod":"1582594662_002","spm":"1001.2101.3001.4129","ab":"new"}'>
+                    <img class="isdefault" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newShareWhite.png" alt="">
+                </a>
+                <div class="QRcode" id="tool-QRcode">
+                    <p class="title">
+                    扫一扫，分享内容
+                    </p>
+                    <div id='shareCode'></div>
+                    <a id="copyPosterUrl" class="url" data-report-click='{"spm":"1001.2101.3001.7493"}' data-report-view='{"spm":"1001.2101.3001.7493"}'>点击复制链接</a>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <div class="toolbox-right">
+                <div class="tool-directory">
+                    <a class="bt-columnlist-show"
+                    data-id="11012998"
+                    data-free="true"
+                    data-subscribe="false"
+                    data-title="Git"
+                    data-img="https://img-blog.csdnimg.cn/20201014180756738.png?x-oss-process=image/resize,m_fixed,h_64,w_64"
+                    data-url="https://blog.csdn.net/qq_45830543/category_11012998.html"
+                    data-sum="1"
+                    data-people="0"
+                    data-price="0"
+                    data-oldprice="0"
+                    data-join="false"
+                    data-studyvip="false"
+                    data-studysubscribe="false"
+                    data-report-view='{"spm":"1001.2101.3001.6334","extend1":"专栏目录"}'
+                    data-report-click='{"spm":"1001.2101.3001.6334","extend1":"专栏目录"}'
+                    >专栏目录</a>
+                </div>
+        </div>
+    </div>  
+</div>
+<script type=text/javascript crossorigin src="https://csdnimg.cn/release/phoenix/production/qrcode-7c90a92189.min.js"></script>
+<script src="//g.csdnimg.cn/??sharewx/1.2.1/sharewx.js" type="text/javascript"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/user-login/3.0.1/user-login.js"></script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/collection-box/2.1.0/collection-box.js"></script>
+                <div id="dmp_ad_58" style="width:100%;overflow-x:hidden"><div id="kp_box_58" data-pid="58"><iframe  src="https://kunpeng-sc.csdnimg.cn/?timestamp=1645783940/#/preview/10400?positionId=58&adId=7488&queryWord=git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.&spm=1001.2101.3001.5002&articleId=116134285&hk=1" frameborder="0" width= "100%"  height= "75px" scrolling="no" ></iframe><img class="pre-img-lasy"  data-src="https://kunyu.csdn.net/1.png?p=58&adId=7488&a=7488&c=10400&k=git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.&spm=1001.2101.3001.5002&articleId=116134285&hk=1&d=1&t=3&u=a9f7457bd5bc4abebf6b02e367c87ccd" style="display: block;width: 0px;height: 0px;"></div></div>
+            <script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_commontools-60a48feb57.min.js" type="text/javascript" async></script>
+            <div class="second-recommend-box recommend-box ">
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/PINGER0077/article/details/81774984"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.1","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1-81774984-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"1","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/PINGER0077/article/details/81774984"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/PINGER0077/article/details/81774984" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.1","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1-81774984-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"1","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/PINGER0077/article/details/81774984"}'  data-report-query='spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-81774984-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-81774984-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em> <em>提交</em>远程<em>报错</em>问题及解决方法</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/PINGER0077" target="_blank"><span class="blog-title">PINGER007的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">08-17</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					4835
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/PINGER0077/article/details/81774984" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.1","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-1-81774984-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"1","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/PINGER0077/article/details/81774984"}'  data-report-query='spm=1001.2101.3001.6650.1&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-81774984-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-1-81774984-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">1 出现以下<em>push</em><em>时</em>的<em>错</em>误的原因及解决办法
+
+
+
+出现<em>错</em>误的主要原因是<em>git</em>hub中的README<em>.</em>md文件不在本地代码目录中
+
+可以通过如下命令进行代码合并【注：pull=fetch+merge]
+
+
+<em>git</em> pull <em>-</em><em>-</em>rebase <em>origin</em> <em>master</em>
+
+执行上面代码后可以看到本地代码库中多了README<em>.</em>md文件
+
+此<em>时</em>再执行语句&nbsp;<em>git</em> <em>push</em>&nbsp;即可完成代码上传到<em>git</em>hub<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+            </div>
+<a id="commentBox" name="commentBox"></a>
+<div id="pcCommentBox" class="comment-box comment-box-new1 " style="display:block">
+	<div class="comment-edit-box d-flex">
+		<div class="user-img">
+			<a href="https://blog.csdn.net/l614928" target="_blank">
+				<img src="https://profile.csdnimg.cn/7/3/2/3_l614928">
+			</a>
+		</div>
+		<form id="commentform">
+			<textarea class="comment-content" name="comment_content" id="comment_content" placeholder="欢迎高质量的评论，低质的评论会被折叠" maxlength="1000"></textarea>
+			<div class="comment-operate-box active">
+				<div class="comment-operate-l">
+					<span id="tip_comment" class="tip">还能输入<em>1000</em>个字符</span>
+				</div>
+				<div class="comment-operate-c">
+					&nbsp;
+				</div>
+				<div class="comment-operate-r">
+					<div class="comment-flod-item" id="commentFlodlook" style="display:none"></div>
+					<div class="comment-operate-item comment-emoticon">
+						<img class="comment-operate-img" data-url="https://csdnimg.cn/release/blogv2/dist/pc/img/" src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentEmotionIcon.png" alt="表情包">
+						<span class="comment-operate-tip">插入表情</span>
+						<div class="comment-emoticon-box comment-operate-isshow">
+							<div class="comment-emoticon-img-box"></div>
+						</div>
+					</div>
+					<div class="comment-operate-item comment-code">
+						<img class="comment-operate-img" data-url="https://csdnimg.cn/release/blogv2/dist/pc/img/" src="https://csdnimg.cn/release/blogv2/dist/pc/img/commentCodeIcon.png" alt="表情包">
+						<span class="comment-operate-tip">代码片</span>
+						<div class="comment-code-box comment-operate-isshow">
+							<ul id="commentCode">
+								<li><a data-code="html">HTML/XML</a></li>
+								<li><a data-code="objc">objective-c</a></li>
+								<li><a data-code="ruby">Ruby</a></li>
+								<li><a data-code="php">PHP</a></li>
+								<li><a data-code="csharp">C</a></li>
+								<li><a data-code="cpp">C++</a></li>
+								<li><a data-code="javascript">JavaScript</a></li>
+								<li><a data-code="python">Python</a></li>
+								<li><a data-code="java">Java</a></li>
+								<li><a data-code="css">CSS</a></li>
+								<li><a data-code="sql">SQL</a></li>
+								<li><a data-code="plain">其它</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="comment-operate-item">
+						<input type="hidden" id="comment_replyId" name="comment_replyId">
+						<input type="hidden" id="article_id" name="article_id" value="116134285">
+						<input type="hidden" id="comment_userId" name="comment_userId" value="">
+						<input type="hidden" id="commentId" name="commentId" value="">
+						<a data-report-click='{"mod":"1582594662_003","spm":"1001.2101.3001.4227","ab":"new"}'>
+						<input type="submit" class="btn-comment btn-comment-input" value="发表评论">
+						<input type="button" class="btn-comment-input btn-comment-defualt" value="评论1">
+						</a>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="comment-list-container">
+		<div class="comment-list-box">
+		</div>
+		<div id="commentPage" class="pagination-box d-none"></div>
+		<div class="opt-box text-center">
+			<div class="btn btn-sm btn-link-blue" id="btnMoreComment"></div>
+		</div>
+	</div>
+</div>
+            <div class="recommend-box insert-baidu-box recommend-box-style ">
+                <div class="recommend-item-box clearfix no-index" style="display:none"></div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/khl_001/article/details/108655856"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.2","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2-108655856-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"2","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/khl_001/article/details/108655856"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/khl_001/article/details/108655856" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.2","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2-108655856-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"2","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/khl_001/article/details/108655856"}'  data-report-query='spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-108655856-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-108655856-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>GIT</em> <em>报错</em>：<em>Branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>from</em> <em>&lsquo;</em><em>origin</em><em>&lsquo;</em></div>
+					<div class="tag">热门推荐</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/khl_001" target="_blank"><span class="blog-title">khl_001的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">09-18</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					3万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/khl_001/article/details/108655856" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.2","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-2-108655856-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"2","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/khl_001/article/details/108655856"}'  data-report-query='spm=1001.2101.3001.6650.2&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-108655856-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2-108655856-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>GIT</em> <em>报错</em>：<em>Branch</em> <em>&lsquo;</em><em>master</em>&rsquo; <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>&lsquo;</em><em>master</em>&rsquo; <em>from</em> <em>&lsquo;</em><em>origin</em>&rsquo;
+<em>git</em>上传仓库<em>时报</em><em>错</em>
+
+解决方法共两步
+1、移除
+<em>git</em> <em>remote</em> rm <em>origin</em>
+2、再次连接
+<em>git</em> <em>remote</em> add <em>origin</em>  <em>&lsquo;</em>地址&rsquo;
+
+</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_43178089/article/details/108486251"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.3","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3-108486251-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"3","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_43178089/article/details/108486251"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_43178089/article/details/108486251" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.3","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3-108486251-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"3","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_43178089/article/details/108486251"}'  data-report-query='spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-108486251-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-108486251-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1">创建新分支，拉取代码</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_43178089" target="_blank"><span class="blog-title">weixin_43178089的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">09-09</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					2013
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_43178089/article/details/108486251" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.3","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-3-108486251-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"3","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_43178089/article/details/108486251"}'  data-report-query='spm=1001.2101.3001.6650.3&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-108486251-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-3-108486251-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">1、查看当前已存在分支
+<em>git</em> <em>branch</em>
+
+
+2、创建新的分支,创建一个dev分支
+<em>git</em> checkout <em>-</em>b dev
+
+
+3、<em>提交</em>分支到远程仓库
+<em>git</em> <em>push</em> <em>origin</em> dev
+
+
+
+</div>
+			</a>
+		</div>
+	</div>
+</div>
+		<dl id="recommend-item-box-tow" class="recommend-item-box type_blog clearfix">
+			
+		</dl>
+<div class="recommend-item-box type_blog clearfix" data-url="https://fzy15116089232.blog.csdn.net/article/details/109059476"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.4","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-4-109059476-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"4","strategy":"2~default~CTRLIST~default","dest":"https://fzy15116089232.blog.csdn.net/article/details/109059476"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://fzy15116089232.blog.csdn.net/article/details/109059476" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.4","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-4-109059476-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"4","strategy":"2~default~CTRLIST~default","dest":"https://fzy15116089232.blog.csdn.net/article/details/109059476"}'  data-report-query='spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-109059476-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-109059476-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Git</em> 出现<em>Branch</em> <em>master</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>master</em>问题 与忽略文件上传</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_18671415" target="_blank"><span class="blog-title">诚的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-13</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					2万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://fzy15116089232.blog.csdn.net/article/details/109059476" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.4","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-4-109059476-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"4","strategy":"2~default~CTRLIST~default","dest":"https://fzy15116089232.blog.csdn.net/article/details/109059476"}'  data-report-query='spm=1001.2101.3001.6650.4&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-109059476-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-4-109059476-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>错</em>误：在<em>push</em> 到远程仓库是一直提示下列<em>错</em>误，检查了使用status检查了也没有发现<em>错</em>误，最后排查出来是当前分支为（（no <em>branch</em>））即右上那个id (┬＿┬)。。。。。
+
+
+
+
+
+
+
+
+
+原因：出现这个问题的根本原因在于推送的分支没有做c<em>om</em>mit操作，直接原因是，在idea整合是<em>错</em>误的创建了一个分支*(no <em>branch</em>) 并一直在该分支下执行<em>push</em> <em>master</em>指令。
+
+解决方案：合并分支到<em>master</em> 并检查status，切换分支：<em>git</em> checkout <em>master</em>、检查冲突（一<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_33716941/article/details/86030616"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.5","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-5-86030616-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"5","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_33716941/article/details/86030616"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_33716941/article/details/86030616" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.5","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-5-86030616-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"5","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_33716941/article/details/86030616"}'  data-report-query='spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-5-86030616-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-5-86030616-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em>跟踪远程分支，查看本地分支追踪和远程分支的关系</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_33716941" target="_blank"><span class="blog-title">weixin_33716941的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-18</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					553
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_33716941/article/details/86030616" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.5","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-5-86030616-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"5","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_33716941/article/details/86030616"}'  data-report-query='spm=1001.2101.3001.6650.5&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-5-86030616-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-5-86030616-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">
+跟踪远程分支
+如果用<em>git</em> <em>push</em>指令<em>时</em>，当前分支没有跟踪远程分支（没有和远程分支建立联系），那么就会<em>git</em>就会<em>报错</em>
+There is no <em>track</em>ing information for the current <em>branch</em><em>.</em>
+Please specify which <em>branch</em> you want <em>to</em> merge with<em>.</em>
+
+因为当前分支没有追踪远程指定的分支的话，当前分<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/USER_LY/article/details/120202814"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.6","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-120202814-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"6","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/USER_LY/article/details/120202814"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/USER_LY/article/details/120202814" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.6","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-120202814-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"6","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/USER_LY/article/details/120202814"}'  data-report-query='spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-120202814-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-120202814-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em> <em>提交</em><em>时报</em><em>错</em>：<em>Branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>from</em> <em>&lsquo;</em><em>origin</em><em>&lsquo;</em><em>.</em></div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/USER_LY" target="_blank"><span class="blog-title">USER_LY的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">09-09</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					5239
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/USER_LY/article/details/120202814" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.6","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-6-120202814-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"6","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/USER_LY/article/details/120202814"}'  data-report-query='spm=1001.2101.3001.6650.6&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-120202814-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-6-120202814-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">这里写自定义目录标题<em>Branch</em> &#39;<em>master</em>&#39; <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> &#39;<em>master</em>&#39; <em>from</em> &#39;<em>origin</em>&#39;<em>.</em>解决方案
+<em>Branch</em> <em>&lsquo;</em><em>master</em>&rsquo; <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>&lsquo;</em><em>master</em>&rsquo; <em>from</em> <em>&lsquo;</em><em>origin</em>&rsquo;<em>.</em>
+
+解决方案
+1、添加到本地仓库
+<em>git</em> add <em>.</em>
+2、添加<em>提交</em>描述
+<em>git</em> c<em>om</em>mit <em>-</em>m <em>&lsquo;</em><em>提交</em>&rsquo;
+3、<em>提交</em>前先从远程仓库主分支中拉取请求
+<em>git</em>pull <em>origin</em> <em>master</em>
+4、把本地仓</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://zeng-cy.blog.csdn.net/article/details/120632829"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.7","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7-120632829-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"7","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://zeng-cy.blog.csdn.net/article/details/120632829"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://zeng-cy.blog.csdn.net/article/details/120632829" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.7","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7-120632829-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"7","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://zeng-cy.blog.csdn.net/article/details/120632829"}'  data-report-query='spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-120632829-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-120632829-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>from</em> <em>&lsquo;</em><em>origin</em><em>&lsquo;</em><em>.</em></div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_42995083" target="_blank"><span class="blog-title">曾小超的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-07</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					3388
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://zeng-cy.blog.csdn.net/article/details/120632829" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.7","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-7-120632829-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"7","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://zeng-cy.blog.csdn.net/article/details/120632829"}'  data-report-query='spm=1001.2101.3001.6650.7&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-120632829-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-7-120632829-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">打算推送代码到码云上面出现了<em>报错</em>：
+
+
+
+
+添加到本地仓库
+<em>git</em> add <em>.</em>
+添加<em>提交</em>描述
+<em>git</em>  c<em>om</em>mit  <em>-</em>m &quot;第一次<em>提交</em>&quot;
+<em>提交</em>前先从远程仓库主分支中拉取请求
+<em>git</em> pull <em>origin</em> <em>master</em>
+把本地仓库代码<em>提交</em>
+<em>git</em> <em>push</em> <em>-</em>u <em>origin</em> <em>master</em>
+
+关键：我好像是少了，<em>提交</em>前先从远程仓库主分支中拉取请求这步，所以每次都没有同步成功。
+
+
+<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/m0_46419510/article/details/110498819"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.8","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-8-110498819-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"8","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/m0_46419510/article/details/110498819"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/m0_46419510/article/details/110498819" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.8","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-8-110498819-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"8","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/m0_46419510/article/details/110498819"}'  data-report-query='spm=1001.2101.3001.6650.8&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-110498819-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-110498819-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Git</em> 出现 <em>Branch</em> <em>master</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>master</em> 问题</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/m0_46419510" target="_blank"><span class="blog-title">李德瑜_博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-02</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					1万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/m0_46419510/article/details/110498819" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.8","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-8-110498819-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"8","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/m0_46419510/article/details/110498819"}'  data-report-query='spm=1001.2101.3001.6650.8&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-110498819-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-8-110498819-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>错</em>误是在：在把项目上传到仓库<em>时</em>出现的。
+
+出现这个<em>错</em>误的<em>时</em>候，其实上传的项目并没有失败，确实是上传到了仓库，但在仓库中却没有显示。
+
+
+
+分析原因：
+
+可能是在新创建仓库<em>时</em>，默认除了&ldquo;主要&rdquo;这个分支外，还创建了个叫&ldquo;主&rdquo;的分支。
+
+也就是说多创建的这个分支而没有给目标仓库选择主分支；其次可能是配置权限。
+
+
+
+解决方法：
+
+最后选择了主分支的同<em>时</em>，配置了权限和规则，成功后，刚才上传的项目显示在了仓库。
+<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/lengyuewusheng99/article/details/107400150"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.9","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-9-107400150-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"9","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/lengyuewusheng99/article/details/107400150"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/lengyuewusheng99/article/details/107400150" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.9","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-9-107400150-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"9","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/lengyuewusheng99/article/details/107400150"}'  data-report-query='spm=1001.2101.3001.6650.9&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-107400150-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-107400150-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em> 本地分支和远程分支关联</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/lengyuewusheng99" target="_blank"><span class="blog-title">Web魔法师</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">07-17</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					2332
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/lengyuewusheng99/article/details/107400150" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.9","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-9-107400150-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"9","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/lengyuewusheng99/article/details/107400150"}'  data-report-query='spm=1001.2101.3001.6650.9&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-107400150-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-9-107400150-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>git</em> checkout <em>-</em>b develop <em>origin</em>/dev // 创建本地分支并于远程dev分支关联
+
+执行命令后出现：
+
+<em>Branch</em> develop <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> dev <em>from</em> <em>origin</em><em>.</em>
+Switched <em>to</em> a new <em>branch</em> &#39;develop&#39;
+
+
+<em>git</em> <em>branch</em> <em>-</em><em>-</em><em>set</em><em>-</em><em>up</em>s<em>tr</em>eam<em>-</em><em>to</em>=<em>origin</em>/dev develop //本地已有分支develop与远程dev 分支关联
+
+执行命令后出现：Bra<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/torrentliu/article/details/103208874"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.10","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-10-103208874-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"10","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/torrentliu/article/details/103208874"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/torrentliu/article/details/103208874" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.10","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-10-103208874-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"10","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/torrentliu/article/details/103208874"}'  data-report-query='spm=1001.2101.3001.6650.10&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-10-103208874-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-10-103208874-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Git</em>基础入门五：分支管理</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/torrentliu" target="_blank"><span class="blog-title">torrentliu的专栏</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">11-22</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					185
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/torrentliu/article/details/103208874" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.10","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-10-103208874-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"10","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/torrentliu/article/details/103208874"}'  data-report-query='spm=1001.2101.3001.6650.10&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-10-103208874-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-10-103208874-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">作者同系列博客参考链接：
+
+<em>Git</em>基础入门五：分支管理<em>Git</em>基础入门四：版本回退（撤销修改）<em>Git</em>基础入门三：创建版本库和添加修改文件基本命令<em>Git</em>基础入门二：工作区和暂存区<em>Git</em>基础入门一：起源与安装
+
+
+
+1、查看分支：<em>git</em> <em>branch</em>
+
+  列出所有分支，当前分支前面会标一个*号。
+
+2、创建分支：<em>git</em> <em>branch</em> &lt;name&gt;
+
+3、切换分支：<em>git</em> check<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/lala12d/article/details/104395761"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.11","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-11-104395761-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"11","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/lala12d/article/details/104395761"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/lala12d/article/details/104395761" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.11","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-11-104395761-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"11","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/lala12d/article/details/104395761"}'  data-report-query='spm=1001.2101.3001.6650.11&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-11-104395761-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-11-104395761-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em> 在分支上创建分支</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/lala12d" target="_blank"><span class="blog-title">怎么肥事</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">02-19</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					568
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/lala12d/article/details/104395761" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.11","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-11-104395761-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"11","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/lala12d/article/details/104395761"}'  data-report-query='spm=1001.2101.3001.6650.11&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-11-104395761-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-11-104395761-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">命令
+
+1<em>.</em>$ <em>git</em> status
+On <em>branch</em> <em>master</em>
+Your <em>branch</em> is <em>up</em> <em>to</em> date with &#39;<em>origin</em>/<em>master</em>&#39;<em>.</em>
+
+nothing <em>to</em> c<em>om</em>mit, working <em>tr</em>ee clean
+
+
+2<em>.</em>$ <em>git</em> <em>branch</em> <em>-</em>a
+* <em>master</em>
+ <em>remote</em>s/<em>origin</em>/HEAD <em>-</em>&gt; <em>origin</em>/<em>master</em>
+ rem<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/qq_39900031/article/details/109282879"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.12","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-12-109282879-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"12","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_39900031/article/details/109282879"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/qq_39900031/article/details/109282879" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.12","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-12-109282879-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"12","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_39900031/article/details/109282879"}'  data-report-query='spm=1001.2101.3001.6650.12&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-12-109282879-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-12-109282879-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Git</em>&mdash;&mdash;<em>git</em>命令参考手册</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_39900031" target="_blank"><span class="blog-title">学习 记录 总结 分享</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-31</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					77
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/qq_39900031/article/details/109282879" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.12","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-12-109282879-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"12","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_39900031/article/details/109282879"}'  data-report-query='spm=1001.2101.3001.6650.12&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-12-109282879-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-12-109282879-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">// 初始化一个<em>Git</em>仓库
+$ <em>git</em> init  
+
+// 查看仓库的状态
+$ <em>git</em> status
+
+// 将所有修改添加到暂存区
+$ <em>git</em> add <em>.</em>
+
+// Ant风格添加修改
+$ <em>git</em> add *  
+
+// 将以Con<em>tr</em>oller结尾的文件的所有修改添加到暂存区
+$ <em>git</em> add *Con<em>tr</em>oller 
+
+// 将所有以Hello开头的文件的修改添加到暂存区 例如:HelloWorld<em>.</em>txt,Hello<em>.</em>java,Hello<em>Git</em><em>.</em>txt &hellip;
+$ <em>git</em> add Hello*   
+</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/qq_33934427/article/details/109004052"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.13","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-13-109004052-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"13","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_33934427/article/details/109004052"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/qq_33934427/article/details/109004052" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.13","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-13-109004052-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"13","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_33934427/article/details/109004052"}'  data-report-query='spm=1001.2101.3001.6650.13&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-13-109004052-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-13-109004052-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em> <em>push</em> <em>origin</em> <em>master</em><em>报错</em>的解决方法</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/qq_33934427" target="_blank"><span class="blog-title">qq_33934427的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">10-10</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					7672
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/qq_33934427/article/details/109004052" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.13","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-13-109004052-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"13","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/qq_33934427/article/details/109004052"}'  data-report-query='spm=1001.2101.3001.6650.13&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-13-109004052-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-13-109004052-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>git</em> <em>push</em> <em>origin</em> <em>master</em><em>报错</em>的解决方法
+一开始我以为是我身份验证失败，看了网上的解决方法，添加了SSH密钥，但是问题还是没有解决。
+<em>git</em>遇到的问题之&ldquo;Please make sure you have the correct access rights and the reposi<em>to</em>ry exists<em>.</em>&rdquo;
+
+Step1：
+参考<em>git</em> 解决 fatal: <em>&lsquo;</em><em>origin</em>&rsquo; does not appear <em>to</em> be a <em>git</em> reposi<em>to</em>ry
+后来发现主要原因不在身份验证上，而是</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_63836026/article/details/124852592"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.14","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-14-124852592-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"14","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_63836026/article/details/124852592"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_63836026/article/details/124852592" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.14","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-14-124852592-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"14","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_63836026/article/details/124852592"}'  data-report-query='spm=1001.2101.3001.6650.14&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-14-124852592-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-14-124852592-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Git</em><em>报错</em><em>-</em><em>-</em>Everything <em>up</em><em>-</em><em>to</em><em>-</em>date <em>branch</em> <em>&lsquo;</em>main<em>&lsquo;</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>&lsquo;</em><em>origin</em>/main<em>&lsquo;</em><em>.</em></div>
+					<div class="tag">最新发布</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_63836026" target="_blank"><span class="blog-title">世界和我们都不该止步于此</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">05-18</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					755
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_63836026/article/details/124852592" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.14","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~CTRLIST~default-14-124852592-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"14","strategy":"2~default~CTRLIST~default","dest":"https://blog.csdn.net/weixin_63836026/article/details/124852592"}'  data-report-query='spm=1001.2101.3001.6650.14&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-14-124852592-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-14-124852592-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">Everything <em>up</em><em>-</em><em>to</em><em>-</em>date_天下1281的博客<em>-</em>CSDN博客我们在<em>git</em> <em>push</em> <em>origin</em> <em>master</em> 会遇到这样的问题<em>Branch</em> <em>master</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>master</em> <em>from</em> <em>origin</em><em>.</em>Everything <em>up</em><em>-</em><em>to</em><em>-</em>date<em>.</em>网上说这个问题发生的原因是：<em>git</em><em>提交</em>改动到缓存，要<em>push</em>的<em>时</em>候不会将本地所有的分支都<em>push</em>掉。 我没有理解人家真正要表达的意思，正在探讨中。 接下来我们https://blog<em>.</em>csdn<em>.</em>ne</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_39548193/article/details/111805886"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.15","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15-111805886-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"15","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39548193/article/details/111805886"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_39548193/article/details/111805886" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.15","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15-111805886-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"15","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39548193/article/details/111805886"}'  data-report-query='spm=1001.2101.3001.6650.15&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-111805886-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-111805886-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em> 创建新分支并关联远程分支_<em>git</em> 新建分支并关联远程分支</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_39548193" target="_blank"><span class="blog-title">weixin_39548193的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-21</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					287
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_39548193/article/details/111805886" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.15","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-15-111805886-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"15","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_39548193/article/details/111805886"}'  data-report-query='spm=1001.2101.3001.6650.15&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-111805886-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-15-111805886-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">## 1、在当前分支下(一般是<em>master</em>分支)，创建feature的本地分支分$ <em>git</em> checkout<em>-</em>b featureSwitched <em>to</em> a new <em>branch</em> &#39;feature&#39;##2、将feature分支推送到远程$ <em>git</em> <em>push</em> <em>origin</em> feature<em>To</em>tal 0 (delta 0), reused 0 (delta 0)<em>To</em> code<em>.</em>aliyun<em>.</em>c<em>om</em>:12<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/gb4215287/article/details/120523906"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.16","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16-120523906-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"16","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/gb4215287/article/details/120523906"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/gb4215287/article/details/120523906" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.16","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16-120523906-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"16","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/gb4215287/article/details/120523906"}'  data-report-query='spm=1001.2101.3001.6650.16&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-120523906-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-120523906-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em>切换到指定远程分支(亲测)</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/gb4215287" target="_blank"><span class="blog-title">gb4215287的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">09-28</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					4703
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/gb4215287/article/details/120523906" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.16","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-16-120523906-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"16","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/gb4215287/article/details/120523906"}'  data-report-query='spm=1001.2101.3001.6650.16&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-120523906-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-16-120523906-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>git</em>切换到指定远程分支
+我们在使用<em>git</em>进行开发的<em>时</em>候经常会遇到需要切换远程分支并且<em>提交</em>到远程指定分支的情况，现在记录下操作步骤。
+
+查看远程所有分支
+$ <em>git</em> <em>branch</em> <em>-</em>a
+1
+<em>git</em> <em>branch</em>不带参数,列出本地已经存在的分支，并且在当前分支的前面用*标记，加上<em>-</em>a参数可以查看所有分支列表，包括本地和远程，远程分支一般会用红色字体标记出来
+
+* dev
+<em>master</em>
+<em>remote</em>s/<em>origin</em>/HEAD <em>-</em>&gt; <em>origin</em>/<em>master</em>
+<em>remote</em>s/<em>origin</em>/maste<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/z_xiao_qiang/article/details/113992163"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.17","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17-113992163-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"17","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/z_xiao_qiang/article/details/113992163"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/z_xiao_qiang/article/details/113992163" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.17","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17-113992163-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"17","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/z_xiao_qiang/article/details/113992163"}'  data-report-query='spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-113992163-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-113992163-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em>问题</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/z_xiao_qiang" target="_blank"><span class="blog-title">z_xiao_qiang的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">02-24</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					39
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/z_xiao_qiang/article/details/113992163" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.17","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-17-113992163-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"17","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/z_xiao_qiang/article/details/113992163"}'  data-report-query='spm=1001.2101.3001.6650.17&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-113992163-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-17-113992163-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">refusing <em>to</em> merge unrelated his<em>to</em>ries
+
+
+<em>Branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>set</em> <em>up</em> <em>to</em> <em>track</em> <em>remote</em> <em>branch</em> <em>&lsquo;</em><em>master</em><em>&lsquo;</em> <em>from</em> <em>&lsquo;</em><em>origin</em><em>&lsquo;</em>
+
+
+<em>git</em>There is no <em>track</em>ing information for the current <em>branch</em><em>.</em> Please
+specify which <em>branch</em> you w
+
+记录几个<em>git</em><em>报错</em>信息，
+
+refusing <em>to</em> merge unrelated his<em>to</em>ri<em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/weixin_30954265/article/details/96111662"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.18","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-18-96111662-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"18","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_30954265/article/details/96111662"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/weixin_30954265/article/details/96111662" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.18","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-18-96111662-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"18","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_30954265/article/details/96111662"}'  data-report-query='spm=1001.2101.3001.6650.18&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-96111662-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-96111662-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>Git</em>Hub笔记（二）&mdash;&mdash;远程仓库的操作</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/weixin_30954265" target="_blank"><span class="blog-title">weixin_30954265的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">03-09</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					13
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/weixin_30954265/article/details/96111662" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.18","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-18-96111662-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"18","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/weixin_30954265/article/details/96111662"}'  data-report-query='spm=1001.2101.3001.6650.18&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-96111662-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-18-96111662-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1">二 远程仓库
+1 创建联系
+第1步：创建SSH Key。在用户主目录下，看看有没有<em>.</em>ssh目录，如果有，再看看这个目录下有没有id_rsa和id_rsa<em>.</em>pub这两个文件，如果已经有了，可直接跳到下一步。如果没有，打开Shell（Windows下打开<em>Git</em> Bash），创建SSH Key：
+$ ssh<em>-</em>keygen <em>-</em>t rsa <em>-</em>C &quot;youremail@example<em>.</em>c<em>om</em>&quot;
+第2步<em>.</em><em>.</em><em>.</em></div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/u012869696/article/details/52097227"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.19","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-19-52097227-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"19","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/u012869696/article/details/52097227"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/u012869696/article/details/52097227" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.19","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-19-52097227-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"19","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/u012869696/article/details/52097227"}'  data-report-query='spm=1001.2101.3001.6650.19&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-19-52097227-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-19-52097227-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em>创建本地分支以及推送本地分之至远程分支</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/u012869696" target="_blank"><span class="blog-title">u012869696的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">08-02</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					2万+
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/u012869696/article/details/52097227" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.19","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-19-52097227-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"19","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/u012869696/article/details/52097227"}'  data-report-query='spm=1001.2101.3001.6650.19&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-19-52097227-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-19-52097227-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>Git</em>分支策略
+实际开发中，应当按照以下几个基本原则进行管理：
+首先，<em>master</em>分支应该是非常稳定的，也就是仅用来发布新版本，平<em>时</em>不能再上边干活。
+那在哪干活呢？干活都在dev分支上，也就是说，dev是不稳定的，到某个<em>时</em>候，比如1<em>.</em>0版本发布的<em>时</em>候，在将dev分支合并到<em>master</em>，在<em>master</em>分支发布新版本。
+你和你的小伙伴都有自己的分支，每个人在自己的分支上干活，<em>时</em>不<em>时</em>地往dev分</div>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="recommend-item-box type_blog clearfix" data-url="https://blog.csdn.net/zhuwade/article/details/121853616"  data-report-view='{"ab":"new","spm":"1001.2101.3001.6650.20","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-20-121853616-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"20","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/zhuwade/article/details/121853616"}'>
+	<div class="content-box">
+		<div class="content-blog display-flex">
+			<div class="title-box">
+				<a href="https://blog.csdn.net/zhuwade/article/details/121853616" class="tit" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.20","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-20-121853616-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"20","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/zhuwade/article/details/121853616"}'  data-report-query='spm=1001.2101.3001.6650.20&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-20-121853616-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-20-121853616-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+					<div class="left ellipsis-online ellipsis-online-1"><em>git</em>仓库搬移与<em>git</em>本地仓库使用多个远程仓库</div>
+				</a>
+			</div>
+			<div class="info-box display-flex">
+				<div class="info">
+					<a href="https://blog.csdn.net/zhuwade" target="_blank"><span class="blog-title">zhuwade的博客</span></a>
+				</div>
+				<div class="info display-flex">
+					<span class="info-block time">12-10</span>
+					<span class="info-block read"><img class="read-img" src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					64
+					</span>
+				</div>
+			</div>
+		</div>
+		<div class="desc-box">
+			<a href="https://blog.csdn.net/zhuwade/article/details/121853616" target="_blank"  data-report-click='{"ab":"new","spm":"1001.2101.3001.6650.20","mod":"popu_387","extra":"{\"highlightScore\":0.0,\"utm_medium\":\"distribute.pc_relevant.none-task-blog-2~default~BlogCommendFromBaidu~default-20-121853616-blog-116134285.pc_relevant_multi_platform_whitelistv1\",\"dist_request_id\":\"1657767491346_20217\"}","dist_request_id":"1657767491346_20217","ab_strategy":"featuressortv1","index":"20","strategy":"2~default~BlogCommendFromBaidu~default","dest":"https://blog.csdn.net/zhuwade/article/details/121853616"}'  data-report-query='spm=1001.2101.3001.6650.20&utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-20-121853616-blog-116134285.pc_relevant_multi_platform_whitelistv1&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7EBlogCommendFromBaidu%7Edefault-20-121853616-blog-116134285.pc_relevant_multi_platform_whitelistv1'>
+				<div class="desc ellipsis-online ellipsis-online-1"><em>git</em>仓库搬移与<em>git</em>本地仓库使用多个远程仓库</div>
+			</a>
+		</div>
+	</div>
+</div>
+            </div>
+<div id="recommendNps" class="recommend-nps-box common-nps-box">
+  <h3 class="aside-title">“相关推荐”对你有帮助么？</h3>
+  <div class="aside-content">
+      <ul class="newnps-list">
+          <li class="newnps-item" data-type="非常没帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel1.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey1.png" alt="">
+              </div>
+              <div class="newnps-text">非常没帮助</div>
+          </li>
+          <li class="newnps-item" data-type="没帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel2.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey2.png" alt="">
+              </div>
+              <div class="newnps-text">没帮助</div>
+          </li>
+          <li class="newnps-item" data-type="一般">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel3.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey3.png" alt="">
+              </div>
+              <div class="newnps-text">一般</div>
+          </li>
+          <li class="newnps-item" data-type="有帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel4.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey4.png" alt="">
+              </div>
+              <div class="newnps-text">有帮助</div>
+          </li>
+          <li class="newnps-item" data-type="非常有帮助">
+              <div class="newnps-img-box">
+                  <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel5.png" alt="">
+                  <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey5.png" alt="">
+              </div>
+              <div class="newnps-text">非常有帮助</div>
+          </li>
+      </ul>
+      <div class="newnps-form-box">
+      <div class="newnps-form">
+          <input type="text" placeholder="请输入建议或反馈后点击提交" class="newnps-input">
+          <span class="newnps-btn">提交</span>
+      </div>
+      </div>
+  </div>
+</div>            <div class="template-box">
+                <span>©️2022 CSDN</span>
+                <span>皮肤主题：黑客帝国</span>
+                <span> 设计师：我叫白小胖</span>
+                <span>
+                    <a href="https://blog.csdn.net/" class="back-home c-blue c-blue-hover c-blue-focus">返回首页</a>
+                </span>
+            </div>
+<div class="blog-footer-bottom" style="margin-top:10px;"></div>
+<script src="https://g.csdnimg.cn/common/csdn-footer/csdn-footer.js" data-isfootertrack="false" type="text/javascript"></script>
+<script type="text/javascript">
+    window.csdn.csdnFooter.options = {
+        el: '.blog-footer-bottom',
+        type: 2
+    }
+</script>        </main>
+<aside class="blog_container_aside">
+<div id="asideProfile" class="aside-box">
+    <div class="profile-intro d-flex">
+        <div class="avatar-box d-flex justify-content-center flex-column">
+            <a href="https://blog.csdn.net/qq_45830543" target="_blank" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4121","dest":"https://blog.csdn.net/qq_45830543","ab":"new"}'>
+                <img src="https://profile.csdnimg.cn/4/9/7/3_qq_45830543" class="avatar_pic">
+            </a>
+        </div>
+        <div class="user-info d-flex flex-column profile-intro-name-box">
+            <div class="profile-intro-name-boxTop">
+                <a href="https://blog.csdn.net/qq_45830543" target="_blank" class="" id="uid" title="郑敬儒~" data-report-click='{"mod":"popu_379","spm":"1001.2101.3001.4122","dest":"https://blog.csdn.net/qq_45830543","ab":"new"}'>
+                    <span class="name " username="qq_45830543">郑敬儒~</span>
+                </a>
+                <span>
+                </span>
+                <span class="flag expert-blog">
+                <span class="bubble">CSDN认证博客专家</span>
+                </span>
+                <span class="flag company-blog">
+                <span class="bubble">CSDN认证企业博客</span>
+                </span>
+            </div>
+            <div class="profile-intro-name-boxFooter">
+                <span class="personal-home-page personal-home-years" title="已加入 CSDN 3年">码龄3年</span>
+                    <span class="personal-home-page">
+                    <a class="personal-home-certification" href="https://i.csdn.net/#/uc/profile?utm_source=14998968" target="_blank" title="西安邮电大学">
+                    <img src="https://csdnimg.cn/identity/colleges.png" alt="">
+                    西安邮电大学
+                    </a>
+                    </span>
+            </div>
+        </div>
+    </div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="89">
+            <a href="https://blog.csdn.net/qq_45830543" data-report-click='{"mod":"1598321000_001","spm":"1001.2101.3001.4310"}' data-report-query="t=1">  
+                <dt><span class="count">89</span></dt>
+                <dd class="font">原创</dd>
+            </a>
+        </dl>
+        <dl class="text-center" data-report-click='{"mod":"1598321000_002","spm":"1001.2101.3001.4311"}' title="130854">
+            <a href="https://blog.csdn.net/rank/list/weekly" target="_blank">
+                <dt><span class="count">13万+</span></dt>
+                <dd class="font">周排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" title="398505">
+            <a href="https://blog.csdn.net/rank/list/total" data-report-click='{"mod":"1598321000_003","spm":"1001.2101.3001.4312"}' target="_blank">
+                <dt><span class="count">39万+</span></dt>
+                <dd class="font">总排名</dd>
+            </a>
+        </dl>
+        <dl class="text-center" style="min-width:58px" title="68992">  
+            <dt><span class="count">6万+</span></dt>
+            <dd>访问</dd>
+        </dl>
+        <dl class="text-center" title="4级,点击查看等级说明">
+            <dt><a href="https://blog.csdn.net/blogdevteam/article/details/103478461" target="_blank">
+                <img class="level" src="https://csdnimg.cn/identity/blog4.png">
+            </a>
+            </dt>
+            <dd>等级</dd>
+        </dl>
+    </div>
+    <div class="item-rank"></div>
+    <div class="data-info d-flex item-tiling">
+        <dl class="text-center" title="1369">
+            <dt><span class="count">1369</span></dt>
+            <dd>积分</dd>
+        </dl>
+         <dl class="text-center" id="fanBox" title="25">
+            <dt><span class="count" id="fan">25</span></dt>
+            <dd>粉丝</dd>
+        </dl>
+        <dl class="text-center" title="138">
+            <dt><span class="count">138</span></dt>
+            <dd>获赞</dd>
+        </dl>
+        <dl class="text-center" title="38">
+            <dt><span class="count">38</span></dt>
+            <dd>评论</dd>
+        </dl>
+        <dl class="text-center" title="265">
+            <dt><span class="count">265</span></dt>
+            <dd>收藏</dd>
+        </dl>
+    </div>
+    <div class="aside-box-footer" data-report-view='{"spm":"3001.4296"}'>
+        <div class="badge-box d-flex">
+            <div class="badge d-flex">
+                <div class="icon-badge" title="签到新秀">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/qiandao1@240.png" alt="签到新秀">
+                    </div>
+                </div>
+                <div class="icon-badge" title="持之以恒">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/chizhiyiheng@240.png" alt="持之以恒">
+                    </div>
+                </div>
+                <div class="icon-badge" title="笔耕不辍">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/02d34b42a3ee476fb50850304ab67017.png" alt="笔耕不辍">
+                    </div>
+                </div>
+                <div class="icon-badge" title="勤写标兵">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/qixiebiaobing4@240.png" alt="勤写标兵">
+                    </div>
+                </div>
+                <div class="icon-badge" title="新人勋章">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/blinknewcomer@240.png" alt="新人勋章">
+                    </div>
+                </div>
+                <div class="icon-badge" title="阅读者勋章">
+                    <div class="mouse-box">
+                        <img class="medal-img" data-report-click='{"spm":"3001.4296"}' src="https://csdnimg.cn/medal/yuedu7@240.png" alt="阅读者勋章">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-intro-name-boxOpration">
+        <div class="opt-letter-watch-box">
+        <a class="bt-button personal-letter" href="https://im.csdn.net/chat/qq_45830543" target="_blank" rel="noopener">私信</a>
+        </div>
+        <div class="opt-letter-watch-box"> 
+            <a class="personal-watch bt-button" id="btnAttent" >关注</a>  
+        </div>
+    </div>
+</div>
+ <div id="asideSearchArticle" class="aside-box">
+	<div class="aside-content search-comter">
+    <div class="aside-search aside-search-blog">         
+        <input type="text" class="input-serch-blog" name="" autocomplete="off" value="" id="search-blog-words" placeholder="搜博主文章">
+        <a class="btn-search-blog">
+                    <img src="//csdnimg.cn/cdn/content-toolbar/csdn-sou.png?v=1587021042">
+        </a>
+    </div>
+    </div>
+</div>
+
+
+<div id="asideHotArticle" class="aside-box">
+	<h3 class="aside-title">热门文章</h3>
+	<div class="aside-content">
+		<ul class="hotArticle-list">
+			<li>
+				<a href="https://blog.csdn.net/qq_45830543/article/details/116807043" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/qq_45830543/article/details/116807043","ab":"new"}'>
+				联想小新进入BIOS方法（解决安装VM虚拟机提示“Intel VT-x处于禁用状态”）
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">8949</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/qq_45830543/article/details/116134285" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/qq_45830543/article/details/116134285","ab":"new"}'>
+				git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">7433</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/qq_45830543/article/details/106122521" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/qq_45830543/article/details/106122521","ab":"new"}'>
+				用栈实现回文字符串的判断
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">5533</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/qq_45830543/article/details/113035212" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/qq_45830543/article/details/113035212","ab":"new"}'>
+				node中的 url.parse()方法
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">5370</span>
+                </a>
+			</li>
+			<li>
+				<a href="https://blog.csdn.net/qq_45830543/article/details/109420257" target="_blank"  data-report-click='{"mod":"popu_541","spm":"1001.2101.3001.4139","dest":"https://blog.csdn.net/qq_45830543/article/details/109420257","ab":"new"}'>
+				H5十大新特性
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/readCountWhite.png" alt="">
+					<span class="read">4274</span>
+                </a>
+			</li>
+		</ul>
+	</div>
+</div>
+<div id="asideCategory" class="aside-box flexible-box">
+    <h3 class="aside-title">分类专栏</h3>
+    <div class="aside-content">
+        <ul>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10382065.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10382065.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        Javascript
+                    </span>
+                </a>
+                <span class="special-column-num">16篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10486150.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10486150.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        React
+                    </span>
+                </a>
+                <span class="special-column-num">10篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10899879.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10899879.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756724.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        前端每日一题
+                    </span>
+                </a>
+                <span class="special-column-num">2篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_11070779.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_11070779.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756724.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        nginx
+                    </span>
+                </a>
+                <span class="special-column-num">3篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10534626.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10534626.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756918.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        CSS
+                    </span>
+                </a>
+                <span class="special-column-num">3篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10909875.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10909875.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756780.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        算法题
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10191166.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10191166.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756918.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        HTML
+                    </span>
+                </a>
+                <span class="special-column-num">2篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10468557.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10468557.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756754.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        知识点总结
+                    </span>
+                </a>
+                <span class="special-column-num">8篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_11012998.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_11012998.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756738.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        Git
+                    </span>
+                </a>
+                <span class="special-column-num">1篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10692348.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10692348.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756923.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        Node
+                    </span>
+                </a>
+                <span class="special-column-num">19篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10904230.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10904230.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        小程序
+                    </span>
+                </a>
+                <span class="special-column-num">2篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10901548.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10901548.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756923.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        es6
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10699570.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10699570.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        HTTP
+                    </span>
+                </a>
+                <span class="special-column-num">5篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10777498.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10777498.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756738.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        MongoDB
+                    </span>
+                </a>
+                <span class="special-column-num">1篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10468590.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10468590.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        数据结构与算法
+                    </span>
+                </a>
+                <span class="special-column-num">3篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10744908.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10744908.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756923.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        操作系统
+                    </span>
+                </a>
+                <span class="special-column-num">1篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10481597.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10481597.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756754.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        俺的周报
+                    </span>
+                </a>
+                <span class="special-column-num">3篇</span>
+            </li>
+            <li>
+                <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10559182.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10559182.html","ab":"new"}'>
+                    <div class="special-column-bar "></div>
+                    <img src="https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                    <span class="title oneline">
+                        前端路由
+                    </span>
+                </a>
+                <span class="special-column-num">1篇</span>
+            </li>
+        </ul>
+    </div>
+    <p class="text-center">
+        <a class="flexible-btn" data-fbox="aside-archive"><img class="look-more" src="https://csdnimg.cn/release/blogv2/dist/pc/img/arrowDownWhite.png" alt=""></a>
+    </p>
+</div>
+<div id="asideNewComments" class="aside-box">
+    <h3 class="aside-title">最新评论</h3>
+    <div class="aside-content">
+        <ul class="newcomment-list">
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq_45830543/article/details/119107433#comments_22303715" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/119107433#comments_22303715","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/119107433#comments_22303715","ab":"new"}'>手动搭建一个react项目（不使用create-react-app脚手架）并更改默认端口</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/staAS" class="user-name" target="_blank">staAS: </a>
+                    <span class="code-comments">大佬，安装完后运行出现了中文乱码情况耶</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq_45830543/article/details/109171174#comments_21645996" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/109171174#comments_21645996","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/109171174#comments_21645996","ab":"new"}'>React.Children.map的用法</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/qq_35088395" class="user-name" target="_blank">OrzrR3: </a>
+                    <span class="code-comments">技术胖？</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq_45830543/article/details/116807043#comments_21589827" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/116807043#comments_21589827","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/116807043#comments_21589827","ab":"new"}'>联想小新进入BIOS方法（解决安装VM虚拟机提示&ldquo;Intel VT-x处于禁用状态&rdquo;）</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/m0_71300664" class="user-name" target="_blank">m0_71300664: </a>
+                    <span class="code-comments">点击立即启动没有用怎么办</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq_45830543/article/details/116892040#comments_21472178" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/116892040#comments_21472178","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/116892040#comments_21472178","ab":"new"}'>解决虚拟机CentOS8无法上网的问题</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/weixin_43831365" class="user-name" target="_blank">为你上九天揽月: </a>
+                    <span class="code-comments">net start &ldquo;VMware DHCP Service&rdquo;
+net start &ldquo;VMware NAT Service&rdquo;
+感谢博主<img src="https://g.csdnimg.cn/static/face/emoji/015.png" alt='表情包' >，我的是没有启动宿主主机nat，就是上面那两个服务。百度了白天，别人教程都没有提到这个点。</span>
+                </p>
+            </li>
+            <li>
+                <a class="title text-truncate" target="_blank" href="https://blog.csdn.net/qq_45830543/article/details/117127493#comments_21080813" data-report-click='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/117127493#comments_21080813","ab":"new"}' data-report-view='{"mod":"popu_542","spm":"1001.2101.3001.4231","dest":"https://blog.csdn.net/qq_45830543/article/details/117127493#comments_21080813","ab":"new"}'>xshell上传文件到虚拟机Linux服务器</a>
+                <p class="comment ellipsis">
+                    <a href="https://blog.csdn.net/weixin_40754468" class="user-name" target="_blank">一个非个一: </a>
+                    <span class="code-comments">可以，学到了，谢谢</span>
+                </p>
+            </li>
+        </ul>
+    </div>
+</div>
+<div id="asideNewNps" class="aside-box common-nps-box">
+    <h3 class="aside-title">您愿意向朋友推荐“博客详情页”吗？</h3>
+    <div class="aside-content">
+        <ul class="newnps-list">
+            <li class="newnps-item" data-type="强烈不推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel1.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey1.png" alt="">
+                </div>
+                <div class="newnps-text">强烈不推荐</div>
+            </li>
+            <li class="newnps-item" data-type="不推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel2.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey2.png" alt="">
+                </div>
+                <div class="newnps-text">不推荐</div>
+            </li>
+            <li class="newnps-item" data-type="一般般">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel3.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey3.png" alt="">
+                </div>
+                <div class="newnps-text">一般般</div>
+            </li>
+            <li class="newnps-item" data-type="推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel4.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey4.png" alt="">
+                </div>
+                <div class="newnps-text">推荐</div>
+            </li>
+            <li class="newnps-item" data-type="强烈推荐">
+                <div class="newnps-img-box">
+                    <img class="newnps-img active" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeel5.png" alt="">
+                    <img class="newnps-img default" src="https://csdnimg.cn/release/blogv2/dist/pc/img/npsFeelGrey5.png" alt="">
+                </div>
+                <div class="newnps-text">强烈推荐</div>
+            </li>
+        </ul>
+        <div class="newnps-form-box">
+        <div class="newnps-form">
+            <input type="text" placeholder="请输入建议或反馈后点击提交" class="newnps-input">
+            <span class="newnps-btn">提交</span>
+        </div>
+        </div>
+    </div>
+</div>
+<div id="asideArchive" class="aside-box" style="display:block!important; width:300px;">
+    <h3 class="aside-title">最新文章</h3>
+    <div class="aside-content">
+        <ul class="inf_list clearfix">
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/qq_45830543/article/details/120327103" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/qq_45830543/article/details/120327103","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/qq_45830543/article/details/120327103","ab":"new"}'>call、apply和bind的模拟实现</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/qq_45830543/article/details/120326434" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/qq_45830543/article/details/120326434","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/qq_45830543/article/details/120326434","ab":"new"}'>构造函数、原型和原型链</a>
+            </li>
+            <li class="clearfix">
+            <a href="https://blog.csdn.net/qq_45830543/article/details/120058991" target="_blank" data-report-click='{"mod":"popu_382","spm":"1001.2101.3001.4136","dest":"https://blog.csdn.net/qq_45830543/article/details/120058991","ab":"new"}' data-report-view='{"mod":"popu_382","dest":"https://blog.csdn.net/qq_45830543/article/details/120058991","ab":"new"}'>关于setTimeout和Promise执行顺序问题</a>
+            </li>
+        </ul>
+        <div class="archive-bar"></div>
+        <div class="archive-box">
+                <div class="archive-list-item"><a href="https://blog.csdn.net/qq_45830543?type=blog&amp;year=2021&amp;month=09" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":"https://blog.csdn.net/qq_45830543?type=blog&amp;year=2021&amp;month=09"}'><span class="year">2021年</span><span class="num">58篇</span></a></div>
+                <div class="archive-list-item"><a href="https://blog.csdn.net/qq_45830543?type=blog&amp;year=2020&amp;month=12" target="_blank" data-report-click='{"mod":"popu_538","spm":"1001.2101.3001.4138","ab":"new","dest":"https://blog.csdn.net/qq_45830543?type=blog&amp;year=2020&amp;month=12"}'><span class="year">2020年</span><span class="num">31篇</span></a></div>
+        </div>
+    </div>
+</div>
+	<div id="footerRightAds" class="isShowFooterAds">
+		<div class="aside-box">
+			<div id="kp_box_57" data-pid="57"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076724771190722"
+     crossorigin="anonymous"></script>
+<!-- 左侧 博文页 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="3806919815"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=57&adId=6816&a=6816&c=0&k=git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.&spm=1001.2101.3001.5001&articleId=116134285&d=1&t=3&u=55a698f4b27445db9493b90e01e4cdec" style="display: block;width: 0px;height: 0px;"></div>
+		</div>
+	</div>
+    <!-- 详情页显示目录 -->
+<!--文章目录-->
+<div id="asidedirectory" class="aside-box">
+    <div class='groupfile' id="directory">
+        <h3 class="aside-title">目录</h3>
+        <div class="align-items-stretch group_item">
+            <div class="pos-box">
+            <div class="scroll-box">
+                <div class="toc-box"></div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+</aside>
+<script>
+	$("a.flexible-btn").click(function(){
+		$(this).parents('div.aside-box').removeClass('flexible-box');
+		$(this).parents("p.text-center").remove();
+	})
+</script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-tooltip/2.7/user-tooltip.js"></script>
+<script type="text/javascript"  src="https://g.csdnimg.cn/user-medal/2.0.0/user-medal.js"></script>    </div>
+<div class="recommend-right align-items-stretch clearfix" id="rightAside" data-type="recommend">
+    <aside class="recommend-right_aside">
+        <div id="recommend-right" >
+                                <div class="programmer1Box">
+                        <div id="kp_box_530" data-pid="530"><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1076724771190722"
+     crossorigin="anonymous"></script>
+<!-- 博文页右侧 大 -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-1076724771190722"
+     data-ad-slot="6842192987"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=530&adId=6859&a=6859&c=0&k=git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.&spm=1001.2101.3001.4647&articleId=116134285&d=1&t=3&u=20c2f50d51c1401a9c24206df07eb7ed" style="display: block;width: 0px;height: 0px;"></div>
+                    </div>
+            <div class='flex-column aside-box groupfile' id="groupfile">
+                <div class="groupfile-div">
+                <h3 class="aside-title">目录</h3>
+                <div class="align-items-stretch group_item">
+                    <div class="pos-box">
+                        <div class="scroll-box">
+                            <div class="toc-box"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+                <div id="recommendAdBox">
+                    <div id="kp_box_479" data-pid="479"><script type="text/javascript" src="https://cdn.wwads.cn/js/makemoney.js" async></script>
+ <div class="wwads-cn wwads-vertical" data-id="149" style="max-width:300px;margin-top:0;background-color: #fff;margin-bottom: 5px;"><img class="pre-img-lasy" data-src="https://kunyu.csdn.net/1.png?p=479&adId=6860&a=6860&c=0&k=git push -u origin master提交时报错Branch ‘master‘ set up to track remote branch ‘master‘ from ‘origin‘.&spm=1001.2101.3001.4834&articleId=116134285&d=1&t=3&u=37c2a50d97d04d69aac5953f2e99576f" style="display: block;width: 0px;height: 0px;"></div>
+                </div>
+            <div class='aside-box kind_person d-flex flex-column'>
+                    <h3 class="aside-title">分类专栏</h3>
+                    <div class="align-items-stretch kindof_item" id="kind_person_column">
+                        <div class="aside-content">
+                            <ul>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10382065.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10382065.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756925.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            Javascript
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">16篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10486150.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10486150.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            React
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">10篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10899879.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10899879.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756724.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            前端每日一题
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">2篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_11070779.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_11070779.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756724.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            nginx
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">3篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10534626.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10534626.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756918.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            CSS
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">3篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10909875.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10909875.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756780.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            算法题
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10191166.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10191166.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756918.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            HTML
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">2篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10468557.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10468557.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756754.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            知识点总结
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">8篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_11012998.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_11012998.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756738.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            Git
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">1篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10692348.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10692348.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756923.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            Node
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">19篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10904230.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10904230.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            小程序
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">2篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10901548.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10901548.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756923.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            es6
+                                        </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10699570.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10699570.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            HTTP
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">5篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10777498.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10777498.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756738.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            MongoDB
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">1篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10468590.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10468590.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756926.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            数据结构与算法
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">3篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10744908.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10744908.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756923.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            操作系统
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">1篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10481597.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10481597.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756754.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            俺的周报
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">3篇</span>
+                                </li>
+                                <li>
+                                    <a class="clearfix special-column-name" target="_blank" href="https://blog.csdn.net/qq_45830543/category_10559182.html" data-report-click='{"mod":"popu_537","spm":"1001.2101.3001.4137","strategy":"pc付费专栏左侧入口","dest":"https://blog.csdn.net/qq_45830543/category_10559182.html","ab":"new"}'>
+                                        <div class="special-column-bar "></div>
+                                        <img src="https://img-blog.csdnimg.cn/20201014180756927.png?x-oss-process=image/resize,m_fixed,h_64,w_64" alt="" onerror="this.src='https://img-blog.csdnimg.cn/20201014180756922.png?x-oss-process=image/resize,m_fixed,h_64,w_64'">
+                                        <span class="">
+                                            前端路由
+                                        </span>
+                                    </a>
+                                    <span class="special-column-num">1篇</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+<div class="recommend-right1  align-items-stretch clearfix" id="rightAsideConcision" data-type="recommend">
+    <aside class="recommend-right_aside">
+        <div id="recommend-right-concision" >
+            <div class='flex-column aside-box groupfile' id="groupfileConcision">
+                <div class="groupfile-div1">
+                <h3 class="aside-title">目录</h3>
+                <div class="align-items-stretch group_item">
+                    <div class="pos-box">
+                        <div class="scroll-box">
+                            <div class="toc-box"></div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+
+</div>
+<div class="mask-dark"></div>
+<script src="https://csdnimg.cn/public/sandalstrap/1.4/js/sandalstrap.min.js"></script>
+<div class="skin-boxshadow"></div>
+<div class="directory-boxshadow"></div>
+<div id="rewardNew" class="reward-popupbox-new">
+	<p class="rewad-title">打赏作者<span class="reward-close"><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/closeBt.png"></span></p>
+	<dl class="profile-box">
+		<dd>
+		<a href="https://blog.csdn.net/qq_45830543" data-report-click='{"mod":"popu_379","dest":"https://blog.csdn.net/qq_45830543","ab":"new"}'>
+			<img src="https://profile.csdnimg.cn/4/9/7/3_qq_45830543" class="avatar_pic">
+		</a>
+		</dd>
+		<dt>
+			<p class="blog-name">郑敬儒~</p>
+			<p class="blog-discript">你的鼓励将是我创作的最大动力</p>
+		</dt>
+	</dl>
+	<div class="reward-box-new">
+			<div class="reward-content"><div class="reward-right"></div></div>
+	</div>
+	<div class="money-box">
+				<span class="choose-money choosed" data-id="2">¥2</span>
+				<span class="choose-money " data-id="4">¥4</span>
+				<span class="choose-money " data-id="6">¥6</span>
+				<span class="choose-money " data-id="10">¥10</span>
+				<span class="choose-money " data-id="20">¥20</span>
+				<input id="customizeMoney" class="customize-money" name="" type="" value="" placeholder="自定义"/>
+				<div class="customize-tip">输入1-500的整数</div>
+	</div>
+	<div class="pay-box">
+		<div class="pay-type-blance pay-type active" data-type="blance">
+			<img class="unchoose" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnChoose.png" alt="">
+			<img class="choose"src="https://csdnimg.cn/release/blogv2/dist/pc/img/newChoose.png" alt="">
+			<span class="pay-type-name">余额支付</span>
+			<span class="pay-type-num">(余额：-- )</span>
+		</div>
+		<div class="pay-type-money pay-type" data-type="money">
+			<img class="unchoose" src="https://csdnimg.cn/release/blogv2/dist/pc/img/newUnChoose.png" alt="">
+			<img class="choose"src="https://csdnimg.cn/release/blogv2/dist/pc/img/newChoose.png" alt="">
+			<span class="pay-type-name">扫码支付</span>
+		</div>
+	</div>
+	<div class="sure-box">
+		<div class="sure-box-money">
+			<div class="code-box">
+				<div class="code-num-box">
+					<span class="code-name">扫码支付：</span><span class="code-num">¥2</span>
+				</div>
+				<div class="code-img-box">
+					<div class="renovate">
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/pay-time-out.png">
+					<span>获取中</span>
+					</div>
+				</div>
+				<div class="code-pay-box">
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/newWeiXin.png" alt="">
+					<img src="https://csdnimg.cn/release/blogv2/dist/pc/img/newZhiFuBao.png" alt="">
+					<span>扫码支付</span>
+				</div>
+			</div>
+		</div>
+		<div class="sure-box-blance">
+			<p class="tip">您的余额不足，请更换扫码支付或<a target="_blank" data-report-click='{"mod":"1597646289_003","spm":"1001.2101.3001.4302"}' href="https://i.csdn.net/#/wallet/balance/recharge?utm_source=RewardVip" class="go-invest">充值</a></p>
+			<p class="is-have-money"><a class="reward-sure">打赏作者</a></p>
+		</div>
+	</div>
+</div>
+<div class="pay-code">
+    <div class="pay-money">实付<span class="pay-money-span" data-nowprice='' data-oldprice=''>元</span></div>
+    <div class="content-blance"><a class="blance-bt" href="javascript:;">使用余额支付</a></div>
+    <div class="content-code">
+    <div id="payCode" data-id="">
+            <div class="renovate">
+                <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/pay-time-out.png">
+                <span>点击重新获取</span>
+            </div>
+        </div>
+        <div class="pay-style"><span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/weixin.png"></span><span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/zhifubao.png"></span><span><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/jingdong.png"></span><span class="text">扫码支付</span></div>
+    </div>
+    <div class="bt-close"><svg t="1567152543821" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="10924" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="12"><defs><style type="text/css"></style></defs><path d="M512 438.378667L806.506667 143.893333a52.032 52.032 0 1 1 73.6 73.621334L585.621333 512l294.485334 294.485333a52.074667 52.074667 0 0 1-73.6 73.642667L512 585.621333 217.514667 880.128a52.053333 52.053333 0 1 1-73.621334-73.642667L438.378667 512 143.893333 217.514667a52.053333 52.053333 0 1 1 73.621334-73.621334L512 438.378667z" fill="" p-id="10925"></path></svg></div>
+    <!-- <p style="margin-top: 8px;font-size: 14px;" class="text-center">支付成功即可阅读</p> -->
+    <div class="pay-balance">
+    <input type="radio" class="pay-code-radio" data-type="details"> 
+    <span class="span">钱包余额</span>
+    <span class="balance" style="color:#FC5531;font-size:14px;">0</span>  
+    <div class="pay-code-tile">
+        <img src="https://csdnimg.cn/release/blogv2/dist/pc/img/pay-help.png" alt="">
+        <div class="pay-code-content">
+            <div class="span">
+                <p class="title">抵扣说明：</p>
+                <p> 1.余额是钱包充值的虚拟货币，按照1:1的比例进行支付金额的抵扣。<br> 2.余额无法直接购买下载，可以购买VIP、C币套餐、付费专栏及课程。</p>
+            </div>
+        </div>
+    </div>
+    </div>
+    <a class="pay-balance-con" href="https://i.csdn.net/#/wallet/balance/recharge" target="_blank"><img src="https://csdnimg.cn/release/blogv2/dist/pc/img/recharge.png" alt=""><span  >余额充值</span></a>
+</div>
+<div style="display:none;">
+	<img src="" onerror='setTimeout(function(){if(!/(csdn.net|iteye.com|baiducontent.com|googleusercontent.com|360webcache.com|sogoucdn.com|bingj.com|baidu.com)$/.test(window.location.hostname)){window.location.href="\x68\x74\x74\x70\x73\x3a\x2f\x2f\x77\x77\x77\x2e\x63\x73\x64\x6e\x2e\x6e\x65\x74"}},3000);'>
+</div>
+<div class="keyword-dec-box" id="keywordDecBox"></div>
+</body>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_highlight-7e7de84184.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/pc_wap_common-fbcbe8567e.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/components/js/edit_copy_code-3d2bfc7b1e.min.js" type="text/javascript"></script>
+<link rel="stylesheet" href="https://csdnimg.cn/release/blog_editor_html/release1.6.12/ckeditor/plugins/codesnippet/lib/highlight/styles/atom-one-light.css">
+<script src="https://g.csdnimg.cn/user-accusation/1.0.5/user-accusation.js" type="text/javascript" ></script>
+<script>
+ // 全局声明
+ if (window.csdn === undefined) {
+      window.csdn = {};
+    }
+    window.csdn.sideToolbar = {
+        options: {
+            report:{
+                isShow: true,
+            },
+            qr: {
+                isShow: false,
+            },
+            guide: {
+                isShow: true
+            }
+        }
+    }
+    $(function(){
+        $(document).on('click',"a.option-box[data-type='report']",function() {
+            window.csdn.userLogin.loadAjax(function(res){
+                window.csdn.feedback({
+                    "type":'blog',
+                    "rtype":'article',
+                    "rid":articleId,
+                    "reportedName":username,
+                    "submitOptions":{
+                        "title":articleTitle,
+                        "contentUrl":articleDetailUrl
+                    },
+                    "callback":function(){
+                        showToast({
+                            text: "感谢您的举报，我们会尽快审核！",
+                            bottom: '10%', 
+                            zindex: 9000, 
+                            speed: 500,
+                            time: 1500
+                        });
+                    }
+                })
+            })
+        });
+    })
+</script>
+    <script src="https://g.csdnimg.cn/baidu-search/1.0.11/baidu-search.js"  type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/download/old_static/js/qrcode.js"></script>
+<script src="https://g.csdnimg.cn/lib/qrcode/1.0.0/qrcode.min.js"></script>
+<script src="https://g.csdnimg.cn/user-ordercart/3.0.1/user-ordercart.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/user-ordertip/5.0.1/user-ordertip.js" type="text/javascript" ></script>
+<script src="https://g.csdnimg.cn/order-payment/4.0.1/order-payment.js" type="text/javascript" ></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/common-a1dfbf1dc3.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/detail-9521d2704a.min.js" type="text/javascript"></script>
+<script src="https://csdnimg.cn/release/blogv2/dist/pc/js/column-887c9595a7.min.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/side-toolbar/3.1/side-toolbar.js" type="text/javascript"></script>
+<script src="https://g.csdnimg.cn/copyright/1.0.4/copyright.js" type="text/javascript"></script>
+<script>
+    $(".MathJax").remove();
+    if ($('div.markdown_views pre.prettyprint code.hljs').length > 0) {
+        $('div.markdown_views')[0].className = 'markdown_views';
+    }
+</script>
+<script type="text/javascript" src="https://csdnimg.cn/release/blog_mathjax/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+            "HTML-CSS": {
+                    linebreaks: { automatic: true, width: "94%container" },
+                    imageFont: null
+            },
+            tex2jax: {
+                preview: "none",
+                ignoreClass:"title-article"
+            },
+            mml2jax: {
+                preview: 'none'
+            }
+    });
+</script>
+<script type="text/javascript" crossorigin src="https://g.csdnimg.cn/common/csdn-login-box/csdn-login-box.js"></script></html>
+
